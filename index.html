@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gewächshaus Pi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      href="//fonts.googleapis.com/css?family=Roboto:400,700,500"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="js/cat.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body onload="init()">
+    <main class="container">
+      <div class="grid">
+        <div>
+          <article><img src="https://picsum.photos/1920/1080" /></article>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <article>Datum / Uhrzeit</article>
+        </div>
+        <div><article>Temp</article></div>
+        <div><article>Lufeu</article></div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <article>
+            <canvas id="chart"></canvas>
+          </article>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <article aria-busy="true" style="text-align: center">
+            <div style="margin-bottom: 1rem">
+              <img id="cat-meme" style="max-height: 300px; object-fit: contain" />
+            </div>
+            <div><button onclick="reloadCatMeme(this)">Neues Tiger-Katzi-Tatzi</button></div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
